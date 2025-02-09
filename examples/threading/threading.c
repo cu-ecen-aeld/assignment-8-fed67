@@ -21,7 +21,7 @@ void* threadfunc(void* thread_param)
 
     usleep(thread_func_args->wait_to_obtain_ms*1000);
 
-    int r = pthread_mutex_lock(thread_func_args->mutex);
+    pthread_mutex_lock(thread_func_args->mutex);
 
     usleep(thread_func_args->wait_to_release_ms*1000);
 
