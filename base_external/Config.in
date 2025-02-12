@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_BAR_42_PATH/package/aesd-assignments/Config.in"
