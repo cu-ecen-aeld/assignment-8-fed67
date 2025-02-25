@@ -21,7 +21,7 @@ jobs:
                 ssh-private-key: |
                     ${{ secrets.SSH_PRIVATE_KEY }}
           - name: Print the variable
-            run: echo "FORCE_UNSAFE_CONFIGURE is set to $FORCE_UNSAFE_CONFIGURE
+            run: echo "FORCE_UNSAFE_CONFIGURE is set to $FORCE_UNSAFE_CONFIGURE"
           - name: Run full test
             env:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
