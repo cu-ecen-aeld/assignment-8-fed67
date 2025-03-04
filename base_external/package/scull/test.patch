@@ -1,0 +1,11 @@
+--- ./scull/pipe.c	2025-03-03 22:53:26.509380914 +0100
++++ ./scull/pipe.c	2025-03-03 22:53:19.121836845 +0100
+@@ -311,7 +311,7 @@
+  */
+ struct file_operations scull_pipe_fops = {
+ 	.owner =	THIS_MODULE,
+-	.llseek =	no_llseek,
++	.llseek =	noop_llseek,
+ 	.read =		scull_p_read,
+ 	.write =	scull_p_write,
+ 	.poll =		scull_p_poll,
