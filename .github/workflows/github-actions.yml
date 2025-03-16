@@ -22,6 +22,10 @@ jobs:
                     ${{ secrets.SSH_PRIVATE_KEY }}
           - name: Print the variable
             run: echo "FORCE_UNSAFE_CONFIGURE is set to $FORCE_UNSAFE_CONFIGURE"
+          - name: Apply my patch
+            run: |
+                 cd assignment-autotest/ 
+                 git apply ../script-helpers.patch
           - name: Run full test
             env:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
