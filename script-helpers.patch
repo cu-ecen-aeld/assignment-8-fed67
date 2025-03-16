@@ -1,0 +1,13 @@
+diff --git a/test/shared/script-helpers b/test/shared/script-helpers
+index ecf7341..9b9d791 100755
+--- a/test/shared/script-helpers
++++ b/test/shared/script-helpers
+@@ -30,7 +30,7 @@ add_to_rootfs() {
+ 	path_to_file=$1
+ 	rootfs_location=$2
+ 	echo "adding ${path_to_file} to the rootfs at ${rootfs_location}"
+-	sshpass -p 'root' scp -o StrictHostKeyChecking=no -P  10022 ${path_to_file} root@localhost:${rootfs_location}
++	sshpass -p 'root' scp -O -o StrictHostKeyChecking=no -P  10022 ${path_to_file} root@localhost:${rootfs_location}
+ }
+ 
+ #This function waits for the qemu to boot up.
